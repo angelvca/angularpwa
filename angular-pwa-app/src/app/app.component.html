@@ -230,7 +230,16 @@
       <h1>Formularios en angular</h1>
       <hr>
 
-      <form [formGroup] = "form()">
+      <h1>Lista de Empresas</h1>
+
+<!-- Mostrar los datos en una lista -->
+    <ul>
+      <li *ngFor="let company of companies">
+        <strong>{{ company.name }}</strong> - {{ company.email }}
+      </li>
+    </ul>
+
+      <form [formGroup] = "form()" (ngSubmit)="onSubmit()">
         <label for="name">Nombre de empresa:
           <input type="text" id="name" formControlName="name">
         </label>
