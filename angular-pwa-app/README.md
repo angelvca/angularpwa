@@ -18,6 +18,8 @@ Porque en el otro no agarra el service worker, pero con ese funciona bien.
 
 Además, cabe mencionar que esta conectado con la base de datos de mock.api, entonces espero que le funcione como a mi me funciono.
 
+https://vercel.com/angelvcas-projects/angularpwa-wmn2 Aquí esta también el link de mi página subida en vercel
+
 
 # AngularPwaApp
 
