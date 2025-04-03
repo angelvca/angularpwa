@@ -1,3 +1,24 @@
+Profe le voy a dejar las instrucciones uqe ya tenía por predeterminado el documento, pero el proceso para inciar mi proyecto es primero instalar todo con:
+
+    npm install
+
+Después hay que construir el proyecto para que se inicie el service worker y el manifest con el siguinete código:
+
+    ng build --configuration production
+
+Por último, solo queda iniciar el proyecto con:
+
+    http-server -c-1 dist/angular-pwa-app/browser -p 8080
+
+Y hay que abrir el que dice:
+
+    http://127.0.0.1:8080/ 
+
+Porque en el otro no agarra el service worker, pero con ese funciona bien.
+
+Además, cabe mencionar que esta conectado con la base de datos de mock.api, entonces espero que le funcione como a mi me funciono.
+
+
 # AngularPwaApp
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.5.
