@@ -1,6 +1,7 @@
 import { bootstrapApplication } from '@angular/platform-browser';
 import { appConfig } from './app/app.config';
 import { AppComponent } from './app/app.component';
+import { provideClientHydration } from '@angular/platform-browser';
 
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
@@ -12,5 +13,10 @@ if ('serviceWorker' in navigator) {
   });
 }
 
-bootstrapApplication(AppComponent, appConfig)
+bootstrapApplication(AppComponent, {
+  providers: [
+    provideClientHydration(), // Habilita la hidratación en el lado del cliente
+    ...appConfig.providers
+  ]
+})
   .catch(err => console.error('Error al iniciar la aplicación: ', err));
